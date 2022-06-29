@@ -1,0 +1,1781 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PHP: Hypertext Preprocessor</title>
+
+ <link rel="icon" type="image/svg+xml" sizes="any" href="https://www.php.net/favicon.svg?v=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="https://www.php.net/favicon-196x196.png?v=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="https://www.php.net/favicon-32x32.png?v=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="https://www.php.net/favicon-16x16.png?v=2">
+ <link rel="shortcut icon" href="https://www.php.net/favicon.ico?v=2">
+
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="https://www.php.net/index.php">
+ <link rel="shorturl" href="https://www.php.net/index">
+ <link rel="alternate" href="https://www.php.net/index" hreflang="x-default">
+
+
+
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1639034403&amp;f=/fonts/Fira/fira.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1539765004&amp;f=/fonts/Font-Awesome/css/fontello.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1655129403&amp;f=/styles/theme-base.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1647366004&amp;f=/styles/theme-medium.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1655129403&amp;f=/styles/home.css" media="screen">
+
+ <!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie7.css" media="screen">
+ <![endif]-->
+
+ <!--[if lte IE 8]>
+ <script>
+  window.brokenIE = true;
+ </script>
+ <![endif]-->
+
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie9.css" media="screen">
+ <![endif]-->
+
+ <!--[if IE]>
+ <script src="https://www.php.net/js/ext/html5.js"></script>
+ <![endif]-->
+
+ <base href="https://www.php.net/index.php">
+
+<meta name="Description" content="PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@official_php" />
+<meta name="twitter:title" content="PHP: Hypertext Preprocessor" />
+<meta name="twitter:description" content="PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world." />
+<meta name="twitter:creator" content="@official_php" />
+<meta name="twitter:image:src" content="https://www.php.net/images/meta-image.png" />
+
+<meta itemprop="name" content="PHP: Hypertext Preprocessor" />
+<meta itemprop="description" content="PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world." />
+<meta itemprop="image" content="https://www.php.net/images/meta-image.png" />
+
+<meta property="og:image" content="https://www.php.net/images/meta-image.png" />
+<meta property="og:description" content="PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world." />
+</head>
+<body class="home ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class=""><a href="/downloads">Downloads</a></li>
+      <li class=""><a href="/docs.php">Documentation</a></li>
+      <li class=""><a href="/get-involved" >Get Involved</a></li>
+      <li class=""><a href="/support">Help</a></li>
+      <li class="">
+        <a href="/releases/8.1/index.php">
+          <img src="/images/php8/logo_php8_1.svg" alt="php8.1" height="22" width="60">
+        </a>
+      </li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<nav id="trick"><div><dl>
+<dt><a href='/manual/en/getting-started.php'>Getting Started</a></dt>
+	<dd><a href='/manual/en/introduction.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/tutorial.php'>A simple tutorial</a></dd>
+<dt><a href='/manual/en/langref.php'>Language Reference</a></dt>
+	<dd><a href='/manual/en/language.basic-syntax.php'>Basic syntax</a></dd>
+	<dd><a href='/manual/en/language.types.php'>Types</a></dd>
+	<dd><a href='/manual/en/language.variables.php'>Variables</a></dd>
+	<dd><a href='/manual/en/language.constants.php'>Constants</a></dd>
+	<dd><a href='/manual/en/language.expressions.php'>Expressions</a></dd>
+	<dd><a href='/manual/en/language.operators.php'>Operators</a></dd>
+	<dd><a href='/manual/en/language.control-structures.php'>Control Structures</a></dd>
+	<dd><a href='/manual/en/language.functions.php'>Functions</a></dd>
+	<dd><a href='/manual/en/language.oop5.php'>Classes and Objects</a></dd>
+	<dd><a href='/manual/en/language.namespaces.php'>Namespaces</a></dd>
+	<dd><a href='/manual/en/language.enumerations.php'>Enumerations</a></dd>
+	<dd><a href='/manual/en/language.errors.php'>Errors</a></dd>
+	<dd><a href='/manual/en/language.exceptions.php'>Exceptions</a></dd>
+	<dd><a href='/manual/en/language.fibers.php'>Fibers</a></dd>
+	<dd><a href='/manual/en/language.generators.php'>Generators</a></dd>
+	<dd><a href='/manual/en/language.attributes.php'>Attributes</a></dd>
+	<dd><a href='/manual/en/language.references.php'>References Explained</a></dd>
+	<dd><a href='/manual/en/reserved.variables.php'>Predefined Variables</a></dd>
+	<dd><a href='/manual/en/reserved.exceptions.php'>Predefined Exceptions</a></dd>
+	<dd><a href='/manual/en/reserved.interfaces.php'>Predefined Interfaces and Classes</a></dd>
+	<dd><a href='/manual/en/context.php'>Context options and parameters</a></dd>
+	<dd><a href='/manual/en/wrappers.php'>Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/security.php'>Security</a></dt>
+	<dd><a href='/manual/en/security.intro.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/security.general.php'>General considerations</a></dd>
+	<dd><a href='/manual/en/security.cgi-bin.php'>Installed as CGI binary</a></dd>
+	<dd><a href='/manual/en/security.apache.php'>Installed as an Apache module</a></dd>
+	<dd><a href='/manual/en/security.sessions.php'>Session Security</a></dd>
+	<dd><a href='/manual/en/security.filesystem.php'>Filesystem Security</a></dd>
+	<dd><a href='/manual/en/security.database.php'>Database Security</a></dd>
+	<dd><a href='/manual/en/security.errors.php'>Error Reporting</a></dd>
+	<dd><a href='/manual/en/security.variables.php'>User Submitted Data</a></dd>
+	<dd><a href='/manual/en/security.hiding.php'>Hiding PHP</a></dd>
+	<dd><a href='/manual/en/security.current.php'>Keeping Current</a></dd>
+<dt><a href='/manual/en/features.php'>Features</a></dt>
+	<dd><a href='/manual/en/features.http-auth.php'>HTTP authentication with PHP</a></dd>
+	<dd><a href='/manual/en/features.cookies.php'>Cookies</a></dd>
+	<dd><a href='/manual/en/features.sessions.php'>Sessions</a></dd>
+	<dd><a href='/manual/en/features.xforms.php'>Dealing with XForms</a></dd>
+	<dd><a href='/manual/en/features.file-upload.php'>Handling file uploads</a></dd>
+	<dd><a href='/manual/en/features.remote-files.php'>Using remote files</a></dd>
+	<dd><a href='/manual/en/features.connection-handling.php'>Connection handling</a></dd>
+	<dd><a href='/manual/en/features.persistent-connections.php'>Persistent Database Connections</a></dd>
+	<dd><a href='/manual/en/features.commandline.php'>Command line usage</a></dd>
+	<dd><a href='/manual/en/features.gc.php'>Garbage Collection</a></dd>
+	<dd><a href='/manual/en/features.dtrace.php'>DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/funcref.php'>Function Reference</a></dt>
+	<dd><a href='/manual/en/refs.basic.php.php'>Affecting PHP's Behaviour</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.audio.php'>Audio Formats Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.remote.auth.php'>Authentication Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.cmdline.php'>Command Line Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.compression.php'>Compression and Archive Extensions</a></dd>
+	<dd><a href='/manual/en/refs.crypto.php'>Cryptography Extensions</a></dd>
+	<dd><a href='/manual/en/refs.database.php'>Database Extensions</a></dd>
+	<dd><a href='/manual/en/refs.calendar.php'>Date and Time Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.file.php'>File System Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.international.php'>Human Language and Character Encoding Support</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.image.php'>Image Processing and Generation</a></dd>
+	<dd><a href='/manual/en/refs.remote.mail.php'>Mail Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.math.php'>Mathematical Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.nontext.php'>Non-Text MIME Output</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.process.php'>Process Control Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.other.php'>Other Basic Extensions</a></dd>
+	<dd><a href='/manual/en/refs.remote.other.php'>Other Services</a></dd>
+	<dd><a href='/manual/en/refs.search.php'>Search Engine Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.server.php'>Server Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.session.php'>Session Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.text.php'>Text Processing</a></dd>
+	<dd><a href='/manual/en/refs.basic.vartype.php'>Variable and Type Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.webservice.php'>Web Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.windows.php'>Windows Only Extensions</a></dd>
+	<dd><a href='/manual/en/refs.xml.php'>XML Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.ui.php'>GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+
+
+<div id="intro" class="clearfix">
+  <div class="container">
+      <div class="hero">
+    <img class="hero-logo" src="/images/logos/php-logo-white.svg" width="240" height="120">
+    <p class="hero-text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+    <div class="hero-actions">
+      <a href="/releases/8.1/index.php" class="hero-btn hero-btn-primary">What's new in 8.1</a>
+      <a href="/downloads.php" class="hero-btn hero-btn-secondary">Download</a>
+    </div><ul class='hero-versions'>
+
+            <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v8.1.7'>8.1.7</a> &middot; <a class='notes' href='/ChangeLog-8.php#8.1.7'>Changelog</a> &middot; <a class='notes' href='/migration81'>Upgrading</a></li>
+
+            <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v8.0.20'>8.0.20</a> &middot; <a class='notes' href='/ChangeLog-8.php#8.0.20'>Changelog</a> &middot; <a class='notes' href='/migration80'>Upgrading</a></li>
+
+            <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v7.4.30'>7.4.30</a> &middot; <a class='notes' href='/ChangeLog-7.php#7.4.30'>Changelog</a> &middot; <a class='notes' href='/migration74'>Upgrading</a></li>
+</ul>
+  </div>  </div>
+</div>
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+<div class='home-content'><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-06-23T15:03:32+00:00">23 Jun 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-06-23-1" id="2022-06-23-1">PHP 8.2.0 Alpha 2 available for testing</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div>
+     <p>The PHP team is pleased to announce the second testing release of PHP 8.2.0, Alpha 2. This continues the PHP 8.2 release cycle, the rough outline of which is specified in the <a href="https://wiki.php.net/todo/php82">PHP Wiki</a>.</p>
+     <p>For source downloads of PHP 8.2.0 Alpha 2 please visit the <a href="https://downloads.php.net/~pierrick/">download page</a>.</p>
+     <p>Please carefully test this version and report any issues found in the <a href="https://github.com/php/php-src/issues">bug reporting system</a>.</p>
+     <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>
+     <p>For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-8.2.0alpha2/NEWS">NEWS</a> file, or the <a href="https://github.com/php/php-src/blob/php-8.2.0alpha2/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.</p>
+     <p>The next release will be PHP 8.2.0 Alpha 3, planned for 7 Jul 2022.</p>
+     <p>The signatures for the release can be found in the <a href="https://gist.github.com/adoy/33f3c8fff8ccaa80d57079cb849cc9c3">manifest</a> or on the <a href="https://qa.php.net/">QA site</a>.</p>
+     <p>Thank you for helping us make PHP better.</p>
+    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-06-09T20:50:23+00:00">09 Jun 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-06-09-4" id="2022-06-09-4">PHP 8.0.20 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.20. This is a security release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.20">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-06-09T15:13:37+00:00">09 Jun 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-06-09-3" id="2022-06-09-3">PHP 8.2.0 Alpha 1 available for testing</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div>
+     <p>The PHP team is pleased to announce the first testing release of PHP 8.2.0, Alpha 1. This starts the PHP 8.2 release cycle, the rough outline of which is specified in the <a href="https://wiki.php.net/todo/php82">PHP Wiki</a>.</p>
+     <p>For source downloads of PHP 8.2.0 Alpha 1 please visit the <a href="https://downloads.php.net/~sergey/">download page</a>.</p>
+     <p>Please carefully test this version and report any issues found in the <a href="https://github.com/php/php-src/issues">bug reporting system</a>.</p>
+     <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>
+     <p>For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-8.2.0alpha1/NEWS">NEWS</a> file, or the <a href="https://github.com/php/php-src/blob/php-8.2.0alpha1/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.</p>
+     <p>The next release will be PHP 8.2.0 Alpha 2, planned for 23 Jun 2022.</p>
+     <p>The signatures for the release can be found in the <a href="https://gist.github.com/saundefined/b83188c0bf39ed69af2186b8f9cb1fdd">manifest</a> or on the <a href="https://qa.php.net/">QA site</a>.</p>
+     <p>Thank you for helping us make PHP better.</p>
+    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-06-09T13:24:09+00:00">09 Jun 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-06-09-2" id="2022-06-09-2">PHP 8.1.7 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.1.7. This is a security release.</p>
+
+<p>All PHP 8.1 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.1.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.7">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-06-09T08:27:58+00:00">09 Jun 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-06-09-1" id="2022-06-09-1">PHP 7.4.30 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 7.4.30. This is a security release.</p>
+
+<p>All PHP 7.4 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 7.4.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.30">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-05-12T21:48:12+00:00">12 May 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-05-12-2" id="2022-05-12-2">PHP 8.1.6 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.1.6. This is a bug fix release.</p>
+
+<p>All PHP 8.1 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.1.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.6">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-05-12T07:44:14+00:00">12 May 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-05-12-1" id="2022-05-12-1">PHP 8.0.19 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.19. This is a bug fix release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.19">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-04-15T01:50:44+00:00">15 Apr 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-04-15-1" id="2022-04-15-1">PHP 8.0.18 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.18. This is a bug fix release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.18">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-04-14T17:49:29+02:00">14 Apr 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-04-14-2" id="2022-04-14-2">PHP 8.1.5 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.1.5. This is a bug fix release.</p>
+
+<p>All PHP 8.1 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.1.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.5">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-04-14T08:22:12+00:00">14 Apr 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-04-14-1" id="2022-04-14-1">PHP 7.4.29 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 7.4.29. This is a security release for Windows users.</p>
+
+<p>This is primarily a release for Windows users due to necessarily
+upgrades to the OpenSSL and zlib dependencies in which security issues
+have been found. All PHP 7.4 on Windows users are encouraged to upgrade
+to this version.</p>
+
+<p>For source downloads of PHP 7.4.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.29">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-03-17T23:34:53+00:00">17 Mar 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-03-17-2" id="2022-03-17-2">PHP 8.1.4 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.1.4. This is a bug fix release.</p>
+
+<p>All PHP 8.1 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.1.4 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.4">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-03-17T08:02:02+00:00">17 Mar 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-03-17-1" id="2022-03-17-1">PHP 8.0.17 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.17. This is a bug fix release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.17">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-02-17T23:59:59+01:00">17 Feb 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-02-17-3" id="2022-02-17-3">PHP 8.1.3 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.1.3. This is a security release.</p>
+
+<p>All PHP 8.1 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.1.3 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.3">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-02-17T23:14:20+00:00">17 Feb 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-02-17-2" id="2022-02-17-2">PHP 8.0.16 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.16. This is a security release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.16">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-02-17T14:37:30+00:00">17 Feb 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-02-17-1" id="2022-02-17-1">PHP 7.4.28 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 7.4.28. This is a security release.</p>
+
+<p>All PHP 7.4 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 7.4.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.28">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-01-21T03:08:44+00:00">21 Jan 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-01-21-1" id="2022-01-21-1">PHP 8.1.2 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.1.2. This is a bug fix release.</p>
+
+<p>All PHP 8.1 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.1.2 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.2">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2022-01-20T11:38:32+00:00">20 Jan 2022</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2022.php#2022-01-20-1" id="2022-01-20-1">PHP 8.0.15 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.15. This is a bug fix release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download#php-8.0">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.15">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-12-17T17:31:25+01:00">17 Dec 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-12-17-1" id="2021-12-17-1">PHP 8.1.1 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.1.1. This is a bug fix release.</p>
+
+<p>All PHP 8.1 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.1.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.1">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-12-16T23:33:54+00:00">16 Dec 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-12-17-1" id="2021-12-17-1">PHP 8.0.14 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.14. This is a bug fix release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.14">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-12-16T15:16:26+00:00">16 Dec 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-12-16-1" id="2021-12-16-1">PHP 7.4.27 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 7.4.27. This is a bug fix release.</p>
+
+<p>All PHP 7.4 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 7.4.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.27">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-11-25T21:02:32+00:00">25 Nov 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-11-25-1" id="2021-11-25-1">PHP 8.1.0 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div>
+<p>The PHP development team announces the immediate availability of PHP 8.1.0. This release marks the latest minor release of the PHP language.</p>
+
+<p>PHP 8.1 comes with numerous improvements and new features such as:</p>
+
+<ul>
+  <li><a href="https://www.php.net/manual/en/language.enumerations.php">Enumerations</a></li>
+  <li><a href="https://wiki.php.net/rfc/readonly_properties_v2">Readonly properties</a></li>
+  <li><a href="https://wiki.php.net/rfc/fibers">Fibers</a></li>
+  <li><a href="https://wiki.php.net/rfc/pure-intersection-types">Pure Intersection Types</a></li>
+  <li><a href="https://www.php.net/manual/en/migration81.new-features.php#migration81.new-features.core.never-type">never</a> return type</li>
+  <li><a href="https://www.php.net/manual/en/migration81.new-features.php#migration81.new-features.core.callable-syntax">First-class Callable Syntax</a></li>
+  <li>"final" modifier for class constants</li>
+  <li>New <a href="https://www.php.net/manual/en/function.fsync.php">fsync</a> and <a href="https://www.php.net/manual/en/function.fdatasync.php">fdatasync</a> functions</li>
+  <li>New <a href="https://www.php.net/manual/en/function.array-is-list.php">array_is_list</a> function</li>
+  <li>Explicit <a href="https://www.php.net/manual/en/migration81.new-features.php#migration81.new-features.core.octal-literal-prefix">Octal numeral notation</a></li>
+  <li>And much much more...</li>
+</ul>
+<p>Take a look at the <a href="https://www.php.net/releases/8.1/">PHP 8.1 Announcement Addendum</a> for more information.</p>
+
+<p>For source downloads of PHP 8.1.0 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.1.0">ChangeLog</a>.
+</p>
+
+<p>The <a href="http://php.net/manual/en/migration81.php">migration guide</a> is available in the PHP Manual.
+Please consult it for the detailed list of new features and backward incompatible changes.</p>
+
+<p>Many thanks to all the contributors and supporters!</p>
+    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-11-22T22:13:41+00:00">22 Nov 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-11-22-1" id="2021-11-22-1">PHP Foundation Announced</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div>
+      <p>
+        <a href="https://opencollective.com/phpfoundation">The PHP Foundation</a> has been
+        <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">announced</a>
+        as an entity for funding the work of developing the PHP language.
+      </p>
+      <p>
+        For more information regarding the structure and purpose of the foundation,
+        please check out the blog post at:
+        <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">jetbrains.com</a>.
+      </p>
+    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-11-19T03:00:11+00:00">19 Nov 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-11-19-1" id="2021-11-19-1">PHP 8.0.13 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 8.0.13. This is a security release.</p>
+
+<p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 8.0.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.13">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-11-18T11:02:47+00:00">18 Nov 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-11-18-2" id="2021-11-18-2">PHP 7.3.33 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 7.3.33. This is a security release.</p>
+
+<p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 7.3.33 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.33">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><article class="newsentry">
+  <header class="title">
+    <time datetime="2021-11-18T10:19:46+00:00">18 Nov 2021</time>
+    <h2 class="newstitle">
+      <a href="https://www.php.net/archive/2021.php#2021-11-18-1" id="2021-11-18-1">PHP 7.4.26 Released!</a>
+    </h2>
+  </header>
+  <div class="newscontent">
+    <div><p>The PHP development team announces the immediate availability of PHP 7.4.26. This is a security release.</p>
+
+<p>All PHP 7.4 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 7.4.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.26">ChangeLog</a>.
+</p>    </div>
+  
+  </div>
+</article><p class="archive"><a href="/archive/">Older News Entries</a></p></div>    </section><!-- layout-content -->
+    
+<aside class="tips">
+    <div class="inner">
+<div class="panel">  <a href="/conferences" class="headline" title="Upcoming conferences">Upcoming conferences</a><div class="body"><ul><li><a href='https://www.php.net/conferences/index.php#id2022-05-05-1' title='CakeFest 2022: The Official CakePHP Conference'>CakeFest 2022: The Official CakePHP Conference</a></li><li><a href='https://www.php.net/conferences/index.php#id2021-09-10-1' title='PHP Russia 2022'>PHP Russia 2022</a></li></ul></div></div>
+    <p class='panel'><a href='/cal.php'>User Group Events</a></p>
+    <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
+    <div class='panel social-media'>
+      <span class='headline'>Social media</span>
+      <div class='body'>
+        <ul>
+          <li>
+            <a href="https://twitter.com/official_php">
+              <i class="icon-twitter"></i>
+              @official_php
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+</aside>
+
+  </div><!-- layout -->
+
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="/copyright.php">Copyright &copy; 2001-2022 The PHP Group</a></li>
+        <li><a href="/my.php">My PHP.net</a></li>
+        <li><a href="/contact.php">Contact</a></li>
+        <li><a href="/sites.php">Other PHP.net sites</a></li>
+        <li><a href="/privacy.php">Privacy policy</a></li>
+        <li><a href="https://github.com/php/web-php/blob/master/index.php">View Source</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    <div class='elephpants'><div class=images></div></div>
+ <!-- External and third party libraries. -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/modernizr.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/hogan-2.0.0.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/typeahead.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/mousetrap.min.js"></script>
+<script src="/cached.php?t=1653918602&amp;f=/js/search.js"></script>
+<script src="/cached.php?t=1637324403&amp;f=/js/common.js"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
+
+</body>
+</html>
+
+
+
+
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PHP: Downloads</title>
+
+ <link rel="icon" type="image/svg+xml" sizes="any" href="https://www.php.net/favicon.svg?v=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="https://www.php.net/favicon-196x196.png?v=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="https://www.php.net/favicon-32x32.png?v=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="https://www.php.net/favicon-16x16.png?v=2">
+ <link rel="shortcut icon" href="https://www.php.net/favicon.ico?v=2">
+
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="https://www.php.net/downloads.php">
+ <link rel="shorturl" href="https://www.php.net/downloads">
+ <link rel="alternate" href="https://www.php.net/downloads" hreflang="x-default">
+
+
+
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1639034403&amp;f=/fonts/Fira/fira.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1539765004&amp;f=/fonts/Font-Awesome/css/fontello.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1655129403&amp;f=/styles/theme-base.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1647366004&amp;f=/styles/theme-medium.css" media="screen">
+
+ <!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie7.css" media="screen">
+ <![endif]-->
+
+ <!--[if lte IE 8]>
+ <script>
+  window.brokenIE = true;
+ </script>
+ <![endif]-->
+
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie9.css" media="screen">
+ <![endif]-->
+
+ <!--[if IE]>
+ <script src="https://www.php.net/js/ext/html5.js"></script>
+ <![endif]-->
+
+ <base href="https://www.php.net/downloads.php">
+
+
+</head>
+<body class="downloads ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class="active"><a href="/downloads">Downloads</a></li>
+      <li class=""><a href="/docs.php">Documentation</a></li>
+      <li class=""><a href="/get-involved" >Get Involved</a></li>
+      <li class=""><a href="/support">Help</a></li>
+      <li class="">
+        <a href="/releases/8.1/index.php">
+          <img src="/images/php8/logo_php8_1.svg" alt="php8.1" height="22" width="60">
+        </a>
+      </li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<div class="headsup"><a href='/index.php#id2022-06-23-1'>PHP 8.2.0 Alpha 2 available for testing</a></div>
+<nav id="trick"><div><dl>
+<dt><a href='/manual/en/getting-started.php'>Getting Started</a></dt>
+	<dd><a href='/manual/en/introduction.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/tutorial.php'>A simple tutorial</a></dd>
+<dt><a href='/manual/en/langref.php'>Language Reference</a></dt>
+	<dd><a href='/manual/en/language.basic-syntax.php'>Basic syntax</a></dd>
+	<dd><a href='/manual/en/language.types.php'>Types</a></dd>
+	<dd><a href='/manual/en/language.variables.php'>Variables</a></dd>
+	<dd><a href='/manual/en/language.constants.php'>Constants</a></dd>
+	<dd><a href='/manual/en/language.expressions.php'>Expressions</a></dd>
+	<dd><a href='/manual/en/language.operators.php'>Operators</a></dd>
+	<dd><a href='/manual/en/language.control-structures.php'>Control Structures</a></dd>
+	<dd><a href='/manual/en/language.functions.php'>Functions</a></dd>
+	<dd><a href='/manual/en/language.oop5.php'>Classes and Objects</a></dd>
+	<dd><a href='/manual/en/language.namespaces.php'>Namespaces</a></dd>
+	<dd><a href='/manual/en/language.enumerations.php'>Enumerations</a></dd>
+	<dd><a href='/manual/en/language.errors.php'>Errors</a></dd>
+	<dd><a href='/manual/en/language.exceptions.php'>Exceptions</a></dd>
+	<dd><a href='/manual/en/language.fibers.php'>Fibers</a></dd>
+	<dd><a href='/manual/en/language.generators.php'>Generators</a></dd>
+	<dd><a href='/manual/en/language.attributes.php'>Attributes</a></dd>
+	<dd><a href='/manual/en/language.references.php'>References Explained</a></dd>
+	<dd><a href='/manual/en/reserved.variables.php'>Predefined Variables</a></dd>
+	<dd><a href='/manual/en/reserved.exceptions.php'>Predefined Exceptions</a></dd>
+	<dd><a href='/manual/en/reserved.interfaces.php'>Predefined Interfaces and Classes</a></dd>
+	<dd><a href='/manual/en/context.php'>Context options and parameters</a></dd>
+	<dd><a href='/manual/en/wrappers.php'>Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/security.php'>Security</a></dt>
+	<dd><a href='/manual/en/security.intro.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/security.general.php'>General considerations</a></dd>
+	<dd><a href='/manual/en/security.cgi-bin.php'>Installed as CGI binary</a></dd>
+	<dd><a href='/manual/en/security.apache.php'>Installed as an Apache module</a></dd>
+	<dd><a href='/manual/en/security.sessions.php'>Session Security</a></dd>
+	<dd><a href='/manual/en/security.filesystem.php'>Filesystem Security</a></dd>
+	<dd><a href='/manual/en/security.database.php'>Database Security</a></dd>
+	<dd><a href='/manual/en/security.errors.php'>Error Reporting</a></dd>
+	<dd><a href='/manual/en/security.variables.php'>User Submitted Data</a></dd>
+	<dd><a href='/manual/en/security.hiding.php'>Hiding PHP</a></dd>
+	<dd><a href='/manual/en/security.current.php'>Keeping Current</a></dd>
+<dt><a href='/manual/en/features.php'>Features</a></dt>
+	<dd><a href='/manual/en/features.http-auth.php'>HTTP authentication with PHP</a></dd>
+	<dd><a href='/manual/en/features.cookies.php'>Cookies</a></dd>
+	<dd><a href='/manual/en/features.sessions.php'>Sessions</a></dd>
+	<dd><a href='/manual/en/features.xforms.php'>Dealing with XForms</a></dd>
+	<dd><a href='/manual/en/features.file-upload.php'>Handling file uploads</a></dd>
+	<dd><a href='/manual/en/features.remote-files.php'>Using remote files</a></dd>
+	<dd><a href='/manual/en/features.connection-handling.php'>Connection handling</a></dd>
+	<dd><a href='/manual/en/features.persistent-connections.php'>Persistent Database Connections</a></dd>
+	<dd><a href='/manual/en/features.commandline.php'>Command line usage</a></dd>
+	<dd><a href='/manual/en/features.gc.php'>Garbage Collection</a></dd>
+	<dd><a href='/manual/en/features.dtrace.php'>DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/funcref.php'>Function Reference</a></dt>
+	<dd><a href='/manual/en/refs.basic.php.php'>Affecting PHP's Behaviour</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.audio.php'>Audio Formats Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.remote.auth.php'>Authentication Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.cmdline.php'>Command Line Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.compression.php'>Compression and Archive Extensions</a></dd>
+	<dd><a href='/manual/en/refs.crypto.php'>Cryptography Extensions</a></dd>
+	<dd><a href='/manual/en/refs.database.php'>Database Extensions</a></dd>
+	<dd><a href='/manual/en/refs.calendar.php'>Date and Time Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.file.php'>File System Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.international.php'>Human Language and Character Encoding Support</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.image.php'>Image Processing and Generation</a></dd>
+	<dd><a href='/manual/en/refs.remote.mail.php'>Mail Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.math.php'>Mathematical Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.nontext.php'>Non-Text MIME Output</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.process.php'>Process Control Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.other.php'>Other Basic Extensions</a></dd>
+	<dd><a href='/manual/en/refs.remote.other.php'>Other Services</a></dd>
+	<dd><a href='/manual/en/refs.search.php'>Search Engine Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.server.php'>Server Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.session.php'>Session Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.text.php'>Text Processing</a></dd>
+	<dd><a href='/manual/en/refs.basic.vartype.php'>Variable and Type Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.webservice.php'>Web Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.windows.php'>Windows Only Extensions</a></dd>
+	<dd><a href='/manual/en/refs.xml.php'>XML Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.ui.php'>GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+<a id="v8"></a>
+    
+  <h3 id="v8.1.7" class="title">
+    <span class="release-state">Current Stable</span>
+    PHP 8.1.7    (<a href="/ChangeLog-8.php#8.1.7" class="changelog">Changelog</a>)
+  </h3>
+  <div class="content-box">
+
+    <ul>
+              <li>
+          <a href="/distributions/php-8.1.7.tar.gz">php-8.1.7.tar.gz</a> <a href="/distributions/php-8.1.7.tar.gz.asc">(sig)</a> [19,252Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">5f0b422a117633c86d48d028934b8dc078309d4247e7565ea34b2686189abdd8</span>                  </li>
+              <li>
+          <a href="/distributions/php-8.1.7.tar.bz2">php-8.1.7.tar.bz2</a> <a href="/distributions/php-8.1.7.tar.bz2.asc">(sig)</a> [15,101Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">b816753eb005511e695d90945c27093c3236cc73db1262656d9fadd73ead7e9d</span>                  </li>
+              <li>
+          <a href="/distributions/php-8.1.7.tar.xz">php-8.1.7.tar.xz</a> <a href="/distributions/php-8.1.7.tar.xz.asc">(sig)</a> [11,444Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">f042322f1b5a9f7c2decb84b7086ef676896c2f7178739b9672afafa964ed0e5</span>                  </li>
+            <li>
+        <a href="https://windows.php.net/download#php-8.1">
+          Windows downloads
+        </a>
+      </li>
+    </ul>
+
+    <a href="#gpg-8.1">GPG Keys for PHP 8.1</a>
+  </div>
+    
+  <h3 id="v8.0.20" class="title">
+    <span class="release-state">Old Stable</span>
+    PHP 8.0.20    (<a href="/ChangeLog-8.php#8.0.20" class="changelog">Changelog</a>)
+  </h3>
+  <div class="content-box">
+
+    <ul>
+              <li>
+          <a href="/distributions/php-8.0.20.tar.gz">php-8.0.20.tar.gz</a> <a href="/distributions/php-8.0.20.tar.gz.asc">(sig)</a> [17,104Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">7e21fd985966264194cde63503b57fd0f0170b32a39bd7af2384c1071b50f164</span>                  </li>
+              <li>
+          <a href="/distributions/php-8.0.20.tar.bz2">php-8.0.20.tar.bz2</a> <a href="/distributions/php-8.0.20.tar.bz2.asc">(sig)</a> [13,245Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">cb7666bf67ed9f6c987d4836caf03d4b364537e6a75e56cd5c986760ecc2fdd8</span>                  </li>
+              <li>
+          <a href="/distributions/php-8.0.20.tar.xz">php-8.0.20.tar.xz</a> <a href="/distributions/php-8.0.20.tar.xz.asc">(sig)</a> [10,624Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">973fec765336ee01f47536a5db1c2eee98df9d34a41522b7b6c760159bf0a77b</span>                  </li>
+            <li>
+        <a href="https://windows.php.net/download#php-8.0">
+          Windows downloads
+        </a>
+      </li>
+    </ul>
+
+    <a href="#gpg-8.0">GPG Keys for PHP 8.0</a>
+  </div>
+<a id="v7"></a>
+    
+  <h3 id="v7.4.30" class="title">
+    <span class="release-state">Old Stable</span>
+    PHP 7.4.30    (<a href="/ChangeLog-7.php#7.4.30" class="changelog">Changelog</a>)
+  </h3>
+  <div class="content-box">
+
+    <ul>
+              <li>
+          <a href="/distributions/php-7.4.30.tar.gz">php-7.4.30.tar.gz</a> <a href="/distributions/php-7.4.30.tar.gz.asc">(sig)</a> [16,471Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">e37ea37e0f79109351ac615da85eb7c2c336101fc5bc802ee79a124a4310dc10</span>                  </li>
+              <li>
+          <a href="/distributions/php-7.4.30.tar.bz2">php-7.4.30.tar.bz2</a> <a href="/distributions/php-7.4.30.tar.bz2.asc">(sig)</a> [12,720Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">b601bb12e53720469b60ea816776cac1c0696b09888a11ad2379b2eee835386e</span>                  </li>
+              <li>
+          <a href="/distributions/php-7.4.30.tar.xz">php-7.4.30.tar.xz</a> <a href="/distributions/php-7.4.30.tar.xz.asc">(sig)</a> [10,175Kb]          <span class="releasedate">09 Jun 2022</span>
+          <span class="sha256">ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d</span>                  </li>
+            <li>
+        <a href="https://windows.php.net/download#php-7.4">
+          Windows downloads
+        </a>
+      </li>
+    </ul>
+
+    <a href="#gpg-7.4">GPG Keys for PHP 7.4</a>
+  </div>
+
+<hr>
+<h2>GPG Keys</h2>
+<p>
+The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</a>.
+The following official GnuPG keys of the current PHP Release Manager can be used
+to verify the tags:
+</p>
+
+<h3 id='gpg-8.1' class='content-header'>PHP 8.1</h3>
+<div class='content-box'>
+  <pre>
+pub   2048R/31CBD89E 2016-12-08
+      Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E
+uid                  Joe Watkins &lt;krakjoe@php.net&gt;
+
+pub   rsa4096 2021-04-26 [SC] [expires: 2025-11-24]
+      39B6 4134 3D8C 104B 2B14  6DC3 F9C3 9DC0 B969 8544
+uid           [ultimate] Ben Ramsey &lt;ramsey@php.net&gt;
+sub   rsa4096 2021-04-26 [E] [expires: 2025-11-24]
+
+pub   rsa4096 2021-04-01 [SC]
+      F1F6 9223 8FBC 1666 E5A5  CCD4 199F 9DFE F6FF BAFD
+uid           [ultimate] Patrick Allaert &lt;patrickallaert@php.net&gt;
+sub   rsa4096 2021-04-01 [E]
+  </pre>
+</div>
+
+
+<h3 id='gpg-8.0' class='content-header'>PHP 8.0</h3>
+<div class='content-box'>
+  <pre>
+pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
+      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
+uid                  Sara Golemon &lt;pollita@php.net&gt;
+
+pub   rsa4096 2020-05-09 [SC] [expires: 2024-05-08]
+      BFDD D286 4282 4F81 18EF  7790 9B67 A5C1 2229 118F
+uid           [ultimate] Gabriel Caruso (Release Manager) &lt;carusogabriel@php.net&gt;
+sub   rsa4096 2020-05-09 [E] [expires: 2024-05-08]
+  </pre>
+</div>
+
+
+<h3 id='gpg-7.4' class='content-header'>PHP 7.4</h3>
+<div class='content-box'>
+  <pre>
+sec   rsa4096 2019-06-11 [SC] [expires: 2029-06-08]
+      5A52880781F755608BF815FC910DEB46F53EA312
+uid           [ultimate] Derick Rethans &lt;gpg@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans &lt;derick@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (GitHub) &lt;github@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (PHP) &lt;derick@php.net&gt;
+ssb   rsa4096 2019-06-11 [E] [expires: 2029-06-08]
+
+pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]
+      4267 0A7F E4D0 441C 8E46  3234 9E4F DC07 4A4E F02D
+uid           [ultimate] Peter Kokot &lt;petk@php.net&gt;
+sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]
+  </pre>
+</div>
+
+
+
+<p>
+  <a href="gpg-keys.php">
+    A full list of GPG keys used for current and older releases is also
+    available.
+  </a>
+</p>
+
+    </section><!-- layout-content -->
+    
+<aside class="tips">
+    <div class="inner">
+<div class="panel">
+  <a href="/supported-versions.php">Supported Versions</a>
+  <div class="body">
+    Check the <a href="/supported-versions.php">supported versions</a> page for
+    more information on the support lifetime of each version of PHP.
+  </div>
+</div>
+
+<p class="panel"><a href="download-docs.php">Documentation download</a></p>
+<p class="panel"><a href="download-logos.php">PHP logos</a></p>
+
+<p class="panel"><a href="/git.php">Development sources (git)</a></p>
+<p class="panel"><a href="/releases/">Old archives</a></p>
+</div>
+</aside>
+
+  </div><!-- layout -->
+
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="/copyright.php">Copyright &copy; 2001-2022 The PHP Group</a></li>
+        <li><a href="/my.php">My PHP.net</a></li>
+        <li><a href="/contact.php">Contact</a></li>
+        <li><a href="/sites.php">Other PHP.net sites</a></li>
+        <li><a href="/privacy.php">Privacy policy</a></li>
+        <li><a href="https://github.com/php/web-php/blob/master/downloads.php">View Source</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+ <!-- External and third party libraries. -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/modernizr.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/hogan-2.0.0.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/typeahead.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/mousetrap.min.js"></script>
+<script src="/cached.php?t=1653918602&amp;f=/js/search.js"></script>
+<script src="/cached.php?t=1637324403&amp;f=/js/common.js"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PHP: Documentation</title>
+
+ <link rel="icon" type="image/svg+xml" sizes="any" href="https://www.php.net/favicon.svg?v=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="https://www.php.net/favicon-196x196.png?v=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="https://www.php.net/favicon-32x32.png?v=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="https://www.php.net/favicon-16x16.png?v=2">
+ <link rel="shortcut icon" href="https://www.php.net/favicon.ico?v=2">
+
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="https://www.php.net/docs.php">
+ <link rel="shorturl" href="https://www.php.net/docs">
+ <link rel="alternate" href="https://www.php.net/docs" hreflang="x-default">
+
+
+
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1639034403&amp;f=/fonts/Fira/fira.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1539765004&amp;f=/fonts/Font-Awesome/css/fontello.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1655129403&amp;f=/styles/theme-base.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1647366004&amp;f=/styles/theme-medium.css" media="screen">
+
+ <!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie7.css" media="screen">
+ <![endif]-->
+
+ <!--[if lte IE 8]>
+ <script>
+  window.brokenIE = true;
+ </script>
+ <![endif]-->
+
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie9.css" media="screen">
+ <![endif]-->
+
+ <!--[if IE]>
+ <script src="https://www.php.net/js/ext/html5.js"></script>
+ <![endif]-->
+
+ <base href="https://www.php.net/docs.php">
+
+
+</head>
+<body class="docs ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class=""><a href="/downloads">Downloads</a></li>
+      <li class="active"><a href="/docs.php">Documentation</a></li>
+      <li class=""><a href="/get-involved" >Get Involved</a></li>
+      <li class=""><a href="/support">Help</a></li>
+      <li class="">
+        <a href="/releases/8.1/index.php">
+          <img src="/images/php8/logo_php8_1.svg" alt="php8.1" height="22" width="60">
+        </a>
+      </li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<div class="headsup"><a href='/index.php#id2022-06-23-1'>PHP 8.2.0 Alpha 2 available for testing</a></div>
+<nav id="trick"><div><dl>
+<dt><a href='/manual/en/getting-started.php'>Getting Started</a></dt>
+	<dd><a href='/manual/en/introduction.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/tutorial.php'>A simple tutorial</a></dd>
+<dt><a href='/manual/en/langref.php'>Language Reference</a></dt>
+	<dd><a href='/manual/en/language.basic-syntax.php'>Basic syntax</a></dd>
+	<dd><a href='/manual/en/language.types.php'>Types</a></dd>
+	<dd><a href='/manual/en/language.variables.php'>Variables</a></dd>
+	<dd><a href='/manual/en/language.constants.php'>Constants</a></dd>
+	<dd><a href='/manual/en/language.expressions.php'>Expressions</a></dd>
+	<dd><a href='/manual/en/language.operators.php'>Operators</a></dd>
+	<dd><a href='/manual/en/language.control-structures.php'>Control Structures</a></dd>
+	<dd><a href='/manual/en/language.functions.php'>Functions</a></dd>
+	<dd><a href='/manual/en/language.oop5.php'>Classes and Objects</a></dd>
+	<dd><a href='/manual/en/language.namespaces.php'>Namespaces</a></dd>
+	<dd><a href='/manual/en/language.enumerations.php'>Enumerations</a></dd>
+	<dd><a href='/manual/en/language.errors.php'>Errors</a></dd>
+	<dd><a href='/manual/en/language.exceptions.php'>Exceptions</a></dd>
+	<dd><a href='/manual/en/language.fibers.php'>Fibers</a></dd>
+	<dd><a href='/manual/en/language.generators.php'>Generators</a></dd>
+	<dd><a href='/manual/en/language.attributes.php'>Attributes</a></dd>
+	<dd><a href='/manual/en/language.references.php'>References Explained</a></dd>
+	<dd><a href='/manual/en/reserved.variables.php'>Predefined Variables</a></dd>
+	<dd><a href='/manual/en/reserved.exceptions.php'>Predefined Exceptions</a></dd>
+	<dd><a href='/manual/en/reserved.interfaces.php'>Predefined Interfaces and Classes</a></dd>
+	<dd><a href='/manual/en/context.php'>Context options and parameters</a></dd>
+	<dd><a href='/manual/en/wrappers.php'>Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/security.php'>Security</a></dt>
+	<dd><a href='/manual/en/security.intro.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/security.general.php'>General considerations</a></dd>
+	<dd><a href='/manual/en/security.cgi-bin.php'>Installed as CGI binary</a></dd>
+	<dd><a href='/manual/en/security.apache.php'>Installed as an Apache module</a></dd>
+	<dd><a href='/manual/en/security.sessions.php'>Session Security</a></dd>
+	<dd><a href='/manual/en/security.filesystem.php'>Filesystem Security</a></dd>
+	<dd><a href='/manual/en/security.database.php'>Database Security</a></dd>
+	<dd><a href='/manual/en/security.errors.php'>Error Reporting</a></dd>
+	<dd><a href='/manual/en/security.variables.php'>User Submitted Data</a></dd>
+	<dd><a href='/manual/en/security.hiding.php'>Hiding PHP</a></dd>
+	<dd><a href='/manual/en/security.current.php'>Keeping Current</a></dd>
+<dt><a href='/manual/en/features.php'>Features</a></dt>
+	<dd><a href='/manual/en/features.http-auth.php'>HTTP authentication with PHP</a></dd>
+	<dd><a href='/manual/en/features.cookies.php'>Cookies</a></dd>
+	<dd><a href='/manual/en/features.sessions.php'>Sessions</a></dd>
+	<dd><a href='/manual/en/features.xforms.php'>Dealing with XForms</a></dd>
+	<dd><a href='/manual/en/features.file-upload.php'>Handling file uploads</a></dd>
+	<dd><a href='/manual/en/features.remote-files.php'>Using remote files</a></dd>
+	<dd><a href='/manual/en/features.connection-handling.php'>Connection handling</a></dd>
+	<dd><a href='/manual/en/features.persistent-connections.php'>Persistent Database Connections</a></dd>
+	<dd><a href='/manual/en/features.commandline.php'>Command line usage</a></dd>
+	<dd><a href='/manual/en/features.gc.php'>Garbage Collection</a></dd>
+	<dd><a href='/manual/en/features.dtrace.php'>DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/funcref.php'>Function Reference</a></dt>
+	<dd><a href='/manual/en/refs.basic.php.php'>Affecting PHP's Behaviour</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.audio.php'>Audio Formats Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.remote.auth.php'>Authentication Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.cmdline.php'>Command Line Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.compression.php'>Compression and Archive Extensions</a></dd>
+	<dd><a href='/manual/en/refs.crypto.php'>Cryptography Extensions</a></dd>
+	<dd><a href='/manual/en/refs.database.php'>Database Extensions</a></dd>
+	<dd><a href='/manual/en/refs.calendar.php'>Date and Time Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.file.php'>File System Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.international.php'>Human Language and Character Encoding Support</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.image.php'>Image Processing and Generation</a></dd>
+	<dd><a href='/manual/en/refs.remote.mail.php'>Mail Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.math.php'>Mathematical Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.nontext.php'>Non-Text MIME Output</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.process.php'>Process Control Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.other.php'>Other Basic Extensions</a></dd>
+	<dd><a href='/manual/en/refs.remote.other.php'>Other Services</a></dd>
+	<dd><a href='/manual/en/refs.search.php'>Search Engine Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.server.php'>Server Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.session.php'>Session Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.text.php'>Text Processing</a></dd>
+	<dd><a href='/manual/en/refs.basic.vartype.php'>Variable and Type Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.webservice.php'>Web Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.windows.php'>Windows Only Extensions</a></dd>
+	<dd><a href='/manual/en/refs.xml.php'>XML Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.ui.php'>GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+
+<h1>Documentation</h1>
+<div class="content-box">
+
+<p>
+ The PHP Manual is available online in a selection of languages.
+ Please pick a language from the list below.
+</p>
+
+<p>
+ Note, that many languages are just under translation, and
+ the untranslated parts are still in English. Also some translated
+ parts might be outdated. The translation teams are open to
+ contributions.
+</p>
+</div>
+
+<p>
+  View Online:
+<strong><a href="/manual/en/">English</a>,
+</strong><a href="/manual/pt_BR/">Brazilian Portuguese</a>,
+<a href="/manual/zh/">Chinese (Simplified)</a>,
+<a href="/manual/fr/">French</a>,
+<a href="/manual/de/">German</a>,
+<a href="/manual/ja/">Japanese</a>,
+<a href="/manual/ru/">Russian</a>,
+<a href="/manual/es/">Spanish</a>,
+<a href="/manual/tr/">Turkish</a>
+</p>
+<p>
+ For downloadable formats, please visit our
+ <a href="download-docs.php">documentation downloads</a> page.
+</p>
+
+<p>
+ Information about php.net URL shortcuts can be found by visiting our
+ <a href="urlhowto.php">Navigation tips &amp; tricks page</a>.
+</p>
+
+<h2 class="content-header">More documentation</h2>
+<ul class="content-box listed">
+ <li>
+  If you are interested in how the documentation is edited and translated,
+  you should read the <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a>.
+ </li>
+ <li>
+  <a href="http://gtk.php.net/">PHP-GTK related documentation</a>
+  is hosted on the PHP-GTK website.
+ </li>
+ <li>
+  <a href="http://pear.php.net/manual/">Documentation of PEAR and the various
+  packages</a> can be found on a separate server.
+ </li>
+ <li>
+  You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
+  2.0 Manual</a> on our site, which we only host for historical purposes.
+  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>.
+ </li>
+ <li>
+  The PHP 4 and PHP 5 documentation has been removed from the
+  manual, but archived versions still exist. For
+  more information, please read <a href="/manual/php4.php">
+  Documentation for PHP 4</a> and <a href="manual/php5.php">
+  Documentation for 5</a>, respectively.
+ </li>
+</ul>
+
+    </section><!-- layout-content -->
+    
+
+  </div><!-- layout -->
+
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="/copyright.php">Copyright &copy; 2001-2022 The PHP Group</a></li>
+        <li><a href="/my.php">My PHP.net</a></li>
+        <li><a href="/contact.php">Contact</a></li>
+        <li><a href="/sites.php">Other PHP.net sites</a></li>
+        <li><a href="/privacy.php">Privacy policy</a></li>
+        <li><a href="https://github.com/php/web-php/blob/master/docs.php">View Source</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+ <!-- External and third party libraries. -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/modernizr.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/hogan-2.0.0.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/typeahead.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/mousetrap.min.js"></script>
+<script src="/cached.php?t=1653918602&amp;f=/js/search.js"></script>
+<script src="/cached.php?t=1637324403&amp;f=/js/common.js"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PHP: Get Involved</title>
+
+ <link rel="icon" type="image/svg+xml" sizes="any" href="https://www.php.net/favicon.svg?v=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="https://www.php.net/favicon-196x196.png?v=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="https://www.php.net/favicon-32x32.png?v=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="https://www.php.net/favicon-16x16.png?v=2">
+ <link rel="shortcut icon" href="https://www.php.net/favicon.ico?v=2">
+
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="https://www.php.net/get-involved.php">
+ <link rel="shorturl" href="https://www.php.net/get-involved">
+ <link rel="alternate" href="https://www.php.net/get-involved" hreflang="x-default">
+
+
+
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1639034403&amp;f=/fonts/Fira/fira.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1539765004&amp;f=/fonts/Font-Awesome/css/fontello.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1655129403&amp;f=/styles/theme-base.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=1647366004&amp;f=/styles/theme-medium.css" media="screen">
+
+ <!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie7.css" media="screen">
+ <![endif]-->
+
+ <!--[if lte IE 8]>
+ <script>
+  window.brokenIE = true;
+ </script>
+ <![endif]-->
+
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="https://www.php.net/styles/workarounds.ie9.css" media="screen">
+ <![endif]-->
+
+ <!--[if IE]>
+ <script src="https://www.php.net/js/ext/html5.js"></script>
+ <![endif]-->
+
+ <base href="https://www.php.net/get-involved.php">
+
+
+</head>
+<body class="community ">
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class=""><a href="/downloads">Downloads</a></li>
+      <li class=""><a href="/docs.php">Documentation</a></li>
+      <li class="active"><a href="/get-involved" >Get Involved</a></li>
+      <li class=""><a href="/support">Help</a></li>
+      <li class="">
+        <a href="/releases/8.1/index.php">
+          <img src="/images/php8/logo_php8_1.svg" alt="php8.1" height="22" width="60">
+        </a>
+      </li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
+  </div>
+  <div id="flash-message"></div>
+</nav>
+<div class="headsup"><a href='/index.php#id2022-06-23-1'>PHP 8.2.0 Alpha 2 available for testing</a></div>
+<nav id="trick"><div><dl>
+<dt><a href='/manual/en/getting-started.php'>Getting Started</a></dt>
+	<dd><a href='/manual/en/introduction.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/tutorial.php'>A simple tutorial</a></dd>
+<dt><a href='/manual/en/langref.php'>Language Reference</a></dt>
+	<dd><a href='/manual/en/language.basic-syntax.php'>Basic syntax</a></dd>
+	<dd><a href='/manual/en/language.types.php'>Types</a></dd>
+	<dd><a href='/manual/en/language.variables.php'>Variables</a></dd>
+	<dd><a href='/manual/en/language.constants.php'>Constants</a></dd>
+	<dd><a href='/manual/en/language.expressions.php'>Expressions</a></dd>
+	<dd><a href='/manual/en/language.operators.php'>Operators</a></dd>
+	<dd><a href='/manual/en/language.control-structures.php'>Control Structures</a></dd>
+	<dd><a href='/manual/en/language.functions.php'>Functions</a></dd>
+	<dd><a href='/manual/en/language.oop5.php'>Classes and Objects</a></dd>
+	<dd><a href='/manual/en/language.namespaces.php'>Namespaces</a></dd>
+	<dd><a href='/manual/en/language.enumerations.php'>Enumerations</a></dd>
+	<dd><a href='/manual/en/language.errors.php'>Errors</a></dd>
+	<dd><a href='/manual/en/language.exceptions.php'>Exceptions</a></dd>
+	<dd><a href='/manual/en/language.fibers.php'>Fibers</a></dd>
+	<dd><a href='/manual/en/language.generators.php'>Generators</a></dd>
+	<dd><a href='/manual/en/language.attributes.php'>Attributes</a></dd>
+	<dd><a href='/manual/en/language.references.php'>References Explained</a></dd>
+	<dd><a href='/manual/en/reserved.variables.php'>Predefined Variables</a></dd>
+	<dd><a href='/manual/en/reserved.exceptions.php'>Predefined Exceptions</a></dd>
+	<dd><a href='/manual/en/reserved.interfaces.php'>Predefined Interfaces and Classes</a></dd>
+	<dd><a href='/manual/en/context.php'>Context options and parameters</a></dd>
+	<dd><a href='/manual/en/wrappers.php'>Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/security.php'>Security</a></dt>
+	<dd><a href='/manual/en/security.intro.php'>Introduction</a></dd>
+	<dd><a href='/manual/en/security.general.php'>General considerations</a></dd>
+	<dd><a href='/manual/en/security.cgi-bin.php'>Installed as CGI binary</a></dd>
+	<dd><a href='/manual/en/security.apache.php'>Installed as an Apache module</a></dd>
+	<dd><a href='/manual/en/security.sessions.php'>Session Security</a></dd>
+	<dd><a href='/manual/en/security.filesystem.php'>Filesystem Security</a></dd>
+	<dd><a href='/manual/en/security.database.php'>Database Security</a></dd>
+	<dd><a href='/manual/en/security.errors.php'>Error Reporting</a></dd>
+	<dd><a href='/manual/en/security.variables.php'>User Submitted Data</a></dd>
+	<dd><a href='/manual/en/security.hiding.php'>Hiding PHP</a></dd>
+	<dd><a href='/manual/en/security.current.php'>Keeping Current</a></dd>
+<dt><a href='/manual/en/features.php'>Features</a></dt>
+	<dd><a href='/manual/en/features.http-auth.php'>HTTP authentication with PHP</a></dd>
+	<dd><a href='/manual/en/features.cookies.php'>Cookies</a></dd>
+	<dd><a href='/manual/en/features.sessions.php'>Sessions</a></dd>
+	<dd><a href='/manual/en/features.xforms.php'>Dealing with XForms</a></dd>
+	<dd><a href='/manual/en/features.file-upload.php'>Handling file uploads</a></dd>
+	<dd><a href='/manual/en/features.remote-files.php'>Using remote files</a></dd>
+	<dd><a href='/manual/en/features.connection-handling.php'>Connection handling</a></dd>
+	<dd><a href='/manual/en/features.persistent-connections.php'>Persistent Database Connections</a></dd>
+	<dd><a href='/manual/en/features.commandline.php'>Command line usage</a></dd>
+	<dd><a href='/manual/en/features.gc.php'>Garbage Collection</a></dd>
+	<dd><a href='/manual/en/features.dtrace.php'>DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href='/manual/en/funcref.php'>Function Reference</a></dt>
+	<dd><a href='/manual/en/refs.basic.php.php'>Affecting PHP's Behaviour</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.audio.php'>Audio Formats Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.remote.auth.php'>Authentication Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.cmdline.php'>Command Line Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.compression.php'>Compression and Archive Extensions</a></dd>
+	<dd><a href='/manual/en/refs.crypto.php'>Cryptography Extensions</a></dd>
+	<dd><a href='/manual/en/refs.database.php'>Database Extensions</a></dd>
+	<dd><a href='/manual/en/refs.calendar.php'>Date and Time Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.file.php'>File System Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.international.php'>Human Language and Character Encoding Support</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.image.php'>Image Processing and Generation</a></dd>
+	<dd><a href='/manual/en/refs.remote.mail.php'>Mail Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.math.php'>Mathematical Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.nontext.php'>Non-Text MIME Output</a></dd>
+	<dd><a href='/manual/en/refs.fileprocess.process.php'>Process Control Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.other.php'>Other Basic Extensions</a></dd>
+	<dd><a href='/manual/en/refs.remote.other.php'>Other Services</a></dd>
+	<dd><a href='/manual/en/refs.search.php'>Search Engine Extensions</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.server.php'>Server Specific Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.session.php'>Session Extensions</a></dd>
+	<dd><a href='/manual/en/refs.basic.text.php'>Text Processing</a></dd>
+	<dd><a href='/manual/en/refs.basic.vartype.php'>Variable and Type Related Extensions</a></dd>
+	<dd><a href='/manual/en/refs.webservice.php'>Web Services</a></dd>
+	<dd><a href='/manual/en/refs.utilspec.windows.php'>Windows Only Extensions</a></dd>
+	<dd><a href='/manual/en/refs.xml.php'>XML Manipulation</a></dd>
+	<dd><a href='/manual/en/refs.ui.php'>GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+
+<h2 class="content-title" id="contributing-to-php">Contributing to PHP</h2>
+<div class="content-box">
+
+<p>
+ Anybody who programs in PHP can be a contributing member of the community
+ that develops and deploys it; the task of deploying PHP, documentation and
+ associated websites is a never ending one. With every release, or release
+ candidate comes a wave of work, which takes a lot of organization and
+ co-ordination.
+</p>
+
+<p>
+ With the introduction of release managers comes a smoother release process,
+ but help is still needed: testing release candidates, finding and squashing
+ bugs in tests, documentation, and sources.
+</p>
+</div>
+
+<h3 class="content-title" id="ways-to-contribute">Four Best Ways to Contribute</h3>
+
+ <ol class="content-box listed">
+  <li>Running test suites in <a href="http://qa.php.net/">RC</a>
+      and <a href="http://php.net/releases">release</a> distributions of PHP</li>
+  <li>Help finding and diagnosing failed tests, see
+      the <a href="http://qa.php.net/write-test.php">phpt documentation</a></li>
+  <li>Filing and resolving bug reports
+      at <a href="http://bugs.php.net">bugs.php.net</a></li>
+  <li>Help maintain and or translate documentation files
+      at the doc-* repositories on <a href="https://github.com/php/?q=doc">github</a>. Check out our
+      <a href="http://doc.php.net/tutorial/">guide for contributors</a>.</li>
+ </ol>
+
+<h3 class="content-header" id="php-src">Development of the PHP source</h3>
+
+<div class="content-box">
+<p>
+ Someone hoping to become involved in the maintenance and development of
+ the source should be experienced in all of the areas mentioned above, as
+ this creates a strong team; everyone knows how every other part of the
+ project works.
+</p>
+
+<p>
+ You will also need experience in C programming as PHP is written entirely in C.
+</p>
+</div>
+
+<h3 class="content-title" id="references">Useful links for developers</h3>
+<ul class="content-box listed">
+    <li><a href="https://heap.space">lxr</a> - an online interface to the
+       PHP source, providing search facilities useful for programmers and researchers</li>
+    <li><a href="https://wiki.php.net/rfc/howto">The RFC process</a> - the process
+        by which developers can suggest and discuss new ideas with the community</li>
+    <li><a href="/build-setup.php">Developer Setup Help</a> - some helpful information
+        regarding setting up a development environment for PHP</li>
+    <li><a href="/mailing-lists.php">Mailing List</a> - list of general and internal mailing lists
+        used by PHP</li>
+</ul>
+
+    </section><!-- layout-content -->
+    
+<aside class="tips">
+    <div class="inner">
+<div class="panel">
+  <div class="headline">Table of Contents</div>
+  <div class="body">
+    <ul>
+      <li><a href="#contributing-to-php">Contributing to PHP</a></li>
+      <li><a href="#ways-to-contribute">Four Best Ways to Contribute</a></li>
+      <li><a href="#php-src">Development of the PHP source</a></li>
+      <li><a href="#references">Useful links for developers</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+</aside>
+
+  </div><!-- layout -->
+
+  <footer>
+    <div class="container footer-content">
+      <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="/copyright.php">Copyright &copy; 2001-2022 The PHP Group</a></li>
+        <li><a href="/my.php">My PHP.net</a></li>
+        <li><a href="/contact.php">Contact</a></li>
+        <li><a href="/sites.php">Other PHP.net sites</a></li>
+        <li><a href="/privacy.php">Privacy policy</a></li>
+        <li><a href="https://github.com/php/web-php/blob/master/get-involved.php">View Source</a></li>
+      </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+ <!-- External and third party libraries. -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/modernizr.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/hogan-2.0.0.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/typeahead.min.js"></script>
+<script src="/cached.php?t=1421837618&amp;f=/js/ext/mousetrap.min.js"></script>
+<script src="/cached.php?t=1653918602&amp;f=/js/search.js"></script>
+<script src="/cached.php?t=1637324403&amp;f=/js/common.js"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
+
+</body>
+</html>
+
+
