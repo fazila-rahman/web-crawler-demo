@@ -1,4 +1,10 @@
 <?php
+/**
+ * This script provides Helper methods to the Crawler Controller
+ * Copyright (C) 2022
+ * 
+ * @author Fazilatur Rahman
+ */
 
 use Illuminate\Support\Facades\Auth;
 

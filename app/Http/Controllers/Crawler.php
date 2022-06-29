@@ -1,4 +1,15 @@
 <?php
+/**
+ * The Crawler Controller Class
+ * Copyright (C) 2022
+
+ * This class accepts the POST request crawl web pages from a single entry point 
+ * and max number of pages to be crawled.
+ * Once crawling is completed it then returns page_status_codes and various page statistics
+ * to the Blade Template 
+
+ * @author Fazilatur Rahman
+ */
 
 namespace App\Http\Controllers;
 
@@ -25,7 +36,8 @@ $image_links = array();
 $total_load_time = 0.0;
 $total_word_count = 0;
 $total_title_length = 0;
-
+$crawled_pages = array();
+// Queues to keep track of the crawling process
 $completed_queue = array();
 $progress_queue = array();
 
@@ -36,6 +48,9 @@ class Crawler extends Controller
     * 
     */
     function index(Request $request){
+        
+        //Save session data
+        $request->session()->put('site', $request->url);
         
         // Receive Form Data
         $this->seed_url = $request->url;
@@ -49,7 +64,8 @@ class Crawler extends Controller
         $this->total_load_time = 0.0;
         $this->total_word_count = 0;
         $this->total_title_length = 0;
-        
+        $this->crawled_pages = array();
+
         // Configure two queues to keep track of crawled pages status
         $this->completed_queue = array();
         $this->progress_queue = array();
@@ -59,7 +75,7 @@ class Crawler extends Controller
         // Create the stream context to start crawling
         $this->context = stream_context_create(array('http'=>array('method'=>"GET", 'headers'=>"User-Agent: aaDemoBot/0.1\n") ) );
         // Call the crawler function
-        $this->crawl_page($this->seed_url, CRAWL_DEPTH);
+        $this->crawl_site($this->seed_url, CRAWL_DEPTH);
 
         // Retrieve crawled pages status code
         $page_status_codes = $this->get_page_status_codes();
@@ -78,66 +94,11 @@ class Crawler extends Controller
 
         );
             
-        return View::make("demo")->with(['stats'=>$stats, 'page_status_codes'=> $this->get_page_status_codes()]);
+        return View::make("demo")->with(['stats'=>$stats, 'page_status_codes'=> $page_status_codes, 'site_entry'=>$this->seed_url ]);
         
     }
 
-    function store_the_page_info($id, $url, $page_content){
-        
-        // Find the domain information
-        $domain = get_domain_name($this->seed_url);
-
-        //keep page record in the database
-        DB::table('links')->insertOrIgnore([    
-            ['url' => $url, 'domain'=> $domain, 'content' => $id . '.html']
-            
-        ]);
-
-        
-        //Store content in the disk
-        file_put_contents($id . '.html', "\n\n".$page_content."\n\n", FILE_APPEND);
-    }
-
-    function find_title_length($page_content){
-        
-        if(strlen($page_content)>0){
-            $titles = array();
-            $page_content = trim(preg_replace('/\s+/', ' ', $page_content)); // supports line breaks inside <title>
-            preg_match("/\<title\>(.*)\<\/title\>/i",$page_content,$titles); // ignore case
-          
-            foreach($titles as $title)
-                $this->total_title_length += strlen($title);
-                                                
-        }
-    }
-
-    function find_images($page_content){
-    
-        if($page_content){
-            $doc = new \DOMDocument();
-            @$doc->loadHTML($page_content);
-            // Create an array of all of the images
-            $tags = $doc->getElementsByTagName('img');
-            // Loop through all img tags
-            foreach ($tags as $tag) {
-                $l =  $tag->getAttribute("src");                 
-                array_push($this->image_links, $l);
-            }
-        }                                                                                                                                                                      
-       
-    }
-
-    function findWordCount($page_content){
-        
-        $word_arrays = array_count_values(str_word_count(strip_tags(strtolower($page_content)), 1));
-        
-        foreach($word_arrays as $key=>$value){
-            $this->total_word_count += $value;
-        }
-        
-    }
-
-    function crawl_page($url, $depth = 2){
+    function crawl_site($url, $depth = 2){
         
         if($depth > 0 && $this->total_number_of_pages < $this->max_number_of_pages){        
             
@@ -163,16 +124,33 @@ class Crawler extends Controller
             {
                 // Keep track of number of pages crawled
                 $this->total_number_of_pages++;    
-                
+                // Keep track of crawled pages
+                array_push($this->crawled_pages, $url); 
+
                 // Check for internal and external links
                 if($this->isExternal($url, $this->seed_url))
                     $this->external_links[] = $url;
                 else $this->internal_links[] = $url;     
         
-                // Index and store the page content
-                $number_of_rows = Link::count(); 
-                $this->store_the_page_info($number_of_rows + 1, $url, $page_content);
-
+                // Index and store the page content if necessary
+                if(!$this->page_previously_crawled($url)) {
+                    if($this->page_needs_indexing($url, $page_content)) {
+                        $number_of_rows = Link::count();
+                        //$this->store_the_page_info($number_of_rows + 1, $url, $page_content);
+                        $this->save_page_index_only($number_of_rows, $url);
+                        $file_name = ($number_of_rows) . '.html';
+                        $this->save_page_content_only($file_name, $url, $page_content);
+                    }
+                }
+                else {
+                    if($this->page_needs_indexing($url, $page_content)) {
+                        $page = LINK::where('url', '=', $url)->first();
+                        $existing_file_name = $page->content;
+                        
+                        $this->save_page_content_only($existing_file_name, $page_content);
+                    }
+                }
+                
                 // Find images
                 $this->find_images($page_content);
 
@@ -185,9 +163,9 @@ class Crawler extends Controller
                 // Load the HTML to find links
                 @$doc->loadHTML($page_content);
 
-                // Create an array of all of the links we find on the page.
+                // Create an array of all of the links on the page
                 $linklist = $doc->getElementsByTagName("a");
-                // Loop through all of the links we find.
+                // Loop through all of the links
                 foreach ($linklist as $link) {
                     $l =  $link->getAttribute("href");
                     $l = sanitize_link($l, $url);
@@ -207,7 +185,6 @@ class Crawler extends Controller
                             else array_push($this->internal_links, $l);           
                         }
                     }
-                
                 }
                 // Remove an item from the queue after it has been crawled 
                 if(isset($this->progress_queue)){
@@ -215,22 +192,54 @@ class Crawler extends Controller
         
                     // Follow each link in the queue
                     foreach ($this->progress_queue as $site) {
-                        $this->crawl_page($site, $depth - 1);
+                        $this->crawl_site($site, $depth - 1);
                     }
                 }
             }
         }
     }
 
-    function urlExists($url){
-        if($url == NULL)
-            return -1;
-        $headers = @get_headers($url);
-        if(!is_array($headers))
-            return -1;
-        if( $headers && str_contains( $headers[0], '200')  || (str_contains( $headers[0], '400') === false)) 
-            return 1;
-        else return 0;
+    function save_page_index_only($id, $url){
+        // Find the domain information
+        $domain = get_domain_name($this->seed_url);
+    
+        //keep page record in the database
+        DB::table('links')->insertOrIgnore([    
+            ['url' => $url, 'domain'=> $domain, 'content' => $id . '.html']
+    
+        ]);
+            
+    }
+
+    function save_page_content_only($file_name, $page_content){
+        // Store file content in the disk/storage 
+        // to compare the file hash to detect changes in the page content 
+        file_put_contents($file_name, "\n\n".$page_content."\n\n", FILE_APPEND);
+    }
+
+    function page_needs_indexing($url, $page_content){
+        if (LINK::where('url', '=', $url)->exists()) {
+            //Retrieve the existing file
+            $page = LINK::where('url', '=', $url)->first();
+            $existing_file_name = $page->content;
+
+            // Store the latest content in a temporary file
+            if(file_put_contents("tmp.txt", $page_content)){
+                // Compare file hash
+                if (page_hash("tmp.txt") == page_hash($existing_file_name))
+                    return false;
+                else return true;    
+            }
+            else return true;                
+        }
+        else return true; 
+         
+    }
+
+    function page_previously_crawled($url){
+        if (LINK::where('url', '=', $url)->exists()) 
+            return true;
+        return false;    
     }
 
     function isExternal($url, $base){
@@ -251,27 +260,6 @@ class Crawler extends Controller
         }
     }
 
-    function find_titles ($url,$content_path = NULL){
-        
-        if(isset($content_path))
-            $page_content = Storage::disk('local')->get($content_path);  
-        else {
-            // Create the stream context.
-            $context = stream_context_create(array('http'=>array('method'=>"GET", 'headers'=>"User-Agent: aaDemoBot/0.1\n") ) );
-            
-            //Keep track of page load
-            $start = microtime(true);
-            $html = file_get_contents(SEED_URL, false, $context);
-            $time_elapsed_secs = microtime(true) - $start;
-            
-            $this->total_load_time += $time_elapsed_secs;
-            $doc = new \DOMDocument();
-            @$doc->loadHTML($html);
-            $title = $doc->getElementsByTagName("title");    
-            $this->total_title_length += strlen($title->item(0)->nodeValue);
-        }    
-    }
-
     function find_word_count($page_content){
         $word_arrays = array_count_values(str_word_count(strip_tags(strtolower($page_content)), 1));
         
@@ -286,20 +274,62 @@ class Crawler extends Controller
     function get_page_status_codes(){
         // Find page domain 
         $domain = get_domain_name($this->seed_url);
-        
-        //Retrieve page URLs from the database
-        $pages = DB::table('links')
-                ->where('domain', 'LIKE', '%'.$domain.'%')
-                ->get();
-        
+                
         //Prepeare the array         
         $page_url_array = array();
-        foreach($pages as $page){
+        
+        foreach($this->crawled_pages as $page){    
             
-            $headers = @get_headers($page->url);
-            array_push($page_url_array, array('Page_url'=>$page->url, 'Status_code'=>$headers[0]));
+            $headers = @get_headers($page);
+            array_push($page_url_array, array('Page_url'=>$page, 'Status_code'=>$headers[0]));
             
         }        
         return $page_url_array;
     }
+
+    function store_the_page_info($id, $url, $page_content){
+    
+        // Find the domain information
+        $domain = get_domain_name($this->seed_url);
+    
+        //keep page record in the database
+        DB::table('links')->insertOrIgnore([    
+            ['url' => $url, 'domain'=> $domain, 'content' => $id . '.html']
+            
+        ]);
+        
+        // Store file content in the disk/storage 
+        // to compare the file hash to detect changes in the page content if it was previously crawled 
+        file_put_contents($id . '.html', "\n\n".$page_content."\n\n", FILE_APPEND);
+    }
+    
+    function find_title_length($page_content){
+        
+        if(strlen($page_content)>0){
+            $titles = array();
+            $page_content = trim(preg_replace('/\s+/', ' ', $page_content)); 
+            preg_match("/\<title\>(.*)\<\/title\>/i",$page_content,$titles); 
+          
+            foreach($titles as $title)
+                $this->total_title_length += strlen($title);
+                                                
+        }
+    }
+    
+    function find_images($page_content){
+        
+        if($page_content){
+            $doc = new \DOMDocument();
+            @$doc->loadHTML($page_content);
+            // Create an array of all of the images
+            $tags = $doc->getElementsByTagName('img');
+            // Loop through all img tags
+            foreach ($tags as $tag) {
+                $l =  $tag->getAttribute("src");                 
+                array_push($this->image_links, $l);
+            }
+        }                                                                                                                                                                      
+       
+    }
+    
 }
