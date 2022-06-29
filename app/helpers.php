@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 if(!function_exists('page_hash')){
     function page_hash($file_path){
-        return hash_file('crc32b', $file_path);
+        if(file_exists($file_path))
+            return hash_file('crc32b', $file_path);
+        return "";    
     }
 }
 
