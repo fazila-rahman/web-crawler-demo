@@ -1,6 +1,6 @@
 # Web Crawler Demo 
 
-> This is the source code for the web crawler demp - a PHP application
+> This is the source code for the Web Crawler Demo - a PHP application
 
 This app runs with Laravel version 9.18.0 (PHP v8.1.6)
 
